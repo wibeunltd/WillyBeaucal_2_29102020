@@ -4,5 +4,5 @@
 - Bibliothèque d'icônes : [Font Awesome](https://fontawesome.com/)
 - Charte graphique : *bleu* #0065FC, *version plus claire du bleu* #DEEBFF, *gris pour le fond* #F2F2F2.
 - Police d'écriture : [Raleway](https://fonts.google.com/specimen/Raleway)
-- Maquette desktop : [Desktop](/images/maquette/Desktop.png)
-- Maquette mobile : [Mobile](/images/maquette/Mobile.png)
+- Maquette desktop : ![Desktop](images/maquette/Desktop.png)
+- Maquette mobile : ![Mobile](images/maquette/Mobile.png)
