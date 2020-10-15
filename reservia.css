@@ -9,3 +9,61 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Définitions des couleurs de la charte graphique*/
+.blue-primary{
+  color: #0065FC;
+}
+
+.blue-secondary{
+  color: #DEEBFF;
+}
+
+.grey{
+  color: #F2F2F2;
+}
+
+/* Définitions de background en fonction des couleurs de la charte graphique  */
+.bbp{
+background-color: #0065FC;
+}
+
+.bbs{
+background-color: #DEEBFF;
+}
+
+.bg{
+background-color: #F2F2F2;
+}
+
+/* Header */
+.nav-head{
+	display: grid;
+	grid-template-columns: 1fr auto auto auto;
+	grid-template-rows: auto;
+	align-items: center;
+}
+
+.logo {
+	padding: .5rem;
+}
+
+.nav-item{
+	padding: 2rem;
+	font-weight: 400;
+	text-decoration: none;
+	color: black;
+    border-top: .125rem solid white;
+}
+
+.signup{
+	padding: 2rem;
+	font-weight: 600;
+	text-decoration: none ;
+	border-top: .125rem solid white;
+}
+
+.nav-item:hover, .signup:hover{
+	color: #0065FC;
+	border-top: .225rem solid #0065FC;
+}
