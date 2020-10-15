@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+.width-1440{
+  max-width: 77.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Définitions des couleurs de la charte graphique*/
 .blue-primary{
   color: #0065FC;
