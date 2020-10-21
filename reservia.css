@@ -10,66 +10,112 @@ body {
   padding: 0;
 }
 
-.width-1440{
+h1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.width-1440 {
   max-width: 77.5rem;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
 /* Définitions des couleurs de la charte graphique*/
-.blue-primary{
-  color: #0065FC;
+.blue-primary {
+  color: #0065fc;
 }
 
-.blue-secondary{
-  color: #DEEBFF;
+.blue-secondary {
+  color: #deebff;
 }
 
-.grey{
-  color: #F2F2F2;
+.grey {
+  color: #f2f2f2;
 }
 
 /* Définitions de background en fonction des couleurs de la charte graphique  */
-.bbp{
-background-color: #0065FC;
+.bg-bp {
+  background-color: #0065fc;
 }
 
-.bbs{
-background-color: #DEEBFF;
+.bg-bs {
+  background-color: #deebff;
 }
 
-.bg{
-background-color: #F2F2F2;
+.bg-g {
+  background-color: #f2f2f2;
+}
+
+body-area {
+  grid-template-rows: repeat(3, auto);
+  row-gap: 1rem;
 }
 
 /* Header */
-.nav-head{
-	display: grid;
-	grid-template-columns: 1fr auto auto auto;
-	grid-template-rows: auto;
-	align-items: center;
+.header-area {
+  display: grid;
+  align-items: center;
+  margin: auto;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: "logo . navbar signup";
 }
 
 .logo {
-	padding: .5rem;
+  padding: 0;
+  grid-area: logo;
 }
 
-.nav-item{
-	padding: 2rem;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-    border-top: .125rem solid white;
+.navbar {
+  align-items: center;
+  grid-area: navbar;
 }
 
-.signup{
-	padding: 2rem;
-	font-weight: 600;
-	text-decoration: none ;
-	border-top: .125rem solid white;
+.nav-link {
+  border-top: 0.125rem solid white;
+  padding: 2rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  color: black;
 }
 
-.nav-item:hover, .signup:hover{
-	color: #0065FC;
-	border-top: .225rem solid #0065FC;
+.signup {
+  border-top: 0.125rem solid white;
+  padding: 2rem;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 600;
+  grid-area: signup;
+}
+
+.active,
+.nav-link:hover,
+.signup:hover {
+  color: #0065fc;
+  border-top: 0.125rem solid #0065fc;
 }
