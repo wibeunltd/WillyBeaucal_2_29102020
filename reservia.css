@@ -119,3 +119,31 @@ body-area {
   color: #0065fc;
   border-top: 0.125rem solid #0065fc;
 }
+
+/* Footer */
+.footer-area {
+  width: 77.5rem;
+  padding: 2rem;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+
+.footer-nav {
+  flex-direction: column;
+  line-height: 1.65rem;
+}
+
+.footer-nav h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-nav a:hover {
+  color: #0065fc;
+}
