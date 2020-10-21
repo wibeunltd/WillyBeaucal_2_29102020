@@ -120,6 +120,36 @@ body-area {
   border-top: 0.125rem solid #0065fc;
 }
 
+/* Contenu */
+.main-area {
+  grid-template-rows: repeat(3, auto);
+  row-gap: 1rem;
+}
+
+article h1 {
+  margin: 0;
+}
+
+article p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.search-form {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.lodging-area {
+  grid-template-columns: 6fr 3fr;
+  column-gap: 1rem;
+}
+
+.activity-area {
+  grid-template-columns: repeat(4, auto);
+  column-gap: 1rem;
+}
+
 /* Footer */
 .footer-area {
   width: 77.5rem;
