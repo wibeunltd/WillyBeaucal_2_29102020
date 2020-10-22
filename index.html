@@ -22,16 +22,15 @@
     </header>
     <!-- Contenu -->
     <main class="grid main-area width-1440">
-        <article class="grid">
+        <article class="grid search-area">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
             <!-- Recherche -->
-            <section class="search-form">
-                <form>
-                    <span><i class="fas fa-map-marker-alt"></i></span>
-                    <input class="" type="search" name="" id="" placeholder="Marseille, France" />
-                    <button class="" type="submit">Rechercher</button>
-                </form>
+            <form class="search-form" action="search.php" method="POST">
+              <span class=" search-icon bg-g"><i class="fas fa-map-marker-alt"></i></span>
+              <input class="search-input" type="search" name="place" id="place" placeholder="Marseille, France" />
+              <button class="search-button bg-bp" type="submit">Rechercher</button>
+            </form>
             </section>
             <!-- Filtres -->
             <section class="filters-area">
