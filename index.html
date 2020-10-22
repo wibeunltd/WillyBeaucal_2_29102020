@@ -27,16 +27,35 @@
             <p>En plein centre ville ou en pleine nature</p>
             <!-- Recherche -->
             <form class="search-form" action="search.php" method="POST">
-              <span class=" search-icon bg-g"><i class="fas fa-map-marker-alt"></i></span>
-              <input class="search-input" type="search" name="place" id="place" placeholder="Marseille, France" />
-              <button class="search-button bg-bp" type="submit">Rechercher</button>
+                <span class="search-icon bg-g"><i class="fas fa-map-marker-alt"></i></span>
+                <input class="search-input" type="search" name="place" id="place" placeholder="Marseille, France" />
+                <button class="search-button bg-bp" type="submit">Rechercher</button>
             </form>
-            </section>
             <!-- Filtres -->
-            <section class="filters-area">
+            <section class="filters-area flex">
                 <h2>Filtres</h2>
+                <form class="filters-form flex" method="post" action="filters.php">
+                    <h3 class="filters-form-choice flex">
+                        <i class="fas fa-money-bill-wave filters-form-icon bg-bs blue-primary"></i><input
+                            type="checkbox" name="class" id="class" /><label for="class">Économique</label>
+                    </h3>
+                    <h3 class="filters-form-choice flex">
+                        <i class="fas fa-child filters-form-icon bg-bs blue-primary"></i><input type="checkbox"
+                            name="family" id="family" /><label for="family">Familial</label>
+                    </h3>
+                    <h3 class="filters-form-choice flex">
+                        <i class="fas fa-heart filters-form-icon bg-bs blue-primary"></i><input type="checkbox"
+                            name="romantic" id="romantic" /><label for="romantic">Romantique</label>
+                    </h3>
+                    <h3 class="filters-form-choice flex">
+                        <i class="fas fa-dog filters-form-icon bg-bs blue-primary"></i><input type="checkbox"
+                            name="animals" id="animals" /><label for="animals">Animaux autorisés</label>
+                    </h3>
+                </form>
             </section>
-            <p>Plus de 500 logements sont disponibles dans cette ville.</p>
+            <p class="filters-form-info">
+                Plus de 500 logements sont disponibles dans cette ville.
+            </p>
         </article>
         <!-- Hébergements -->
         <article class="grid lodging-area">
