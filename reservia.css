@@ -174,14 +174,14 @@ article p {
 }
 
 .search-button {
-  padding: 1rem 1.5rem;
+  padding: .92rem 1.5rem;
   border-width: 0.0625rem 0;
   border-style: solid none;
   border-color: #0065fc;
   border-radius: 0 1rem 1rem 0;
   color: white;
   font-family: "Raleway", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
 }
