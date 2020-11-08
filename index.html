@@ -2,94 +2,207 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reservia</title>
+    <title>Reservia Final</title>
     <link rel="icon" type="image/svg" href="images/logo/favicon.svg" />
     <link rel="stylesheet" href="reservia.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 </head>
 
-<body class="grid body-area">
+<body>
     <!-- Header -->
-    <header class="header-area width-1440">
+    <header class="header-area w1440p">
         <a class="logo" href="index.html"><img src="images/logo/reservia.svg" alt="logo de la société reservia" /></a>
         <nav class="navbar flex">
             <a class="nav-link active" href="#lodging">Hébergements</a>
             <a class="nav-link" href="#activity">Activités</a>
         </nav>
-        <a class="signup flex blue-primary" href="register.html">S'inscrire</a>
+        <a class="signup flex blue-primary" href="#">S'inscrire</a>
     </header>
-    <!-- Contenu -->
-    <main class="grid main-area width-1440">
-        <article class="grid search-area">
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
-            <!-- Recherche -->
-            <form class="search-form" action="search.php" method="POST">
-                <span class="search-icon bg-g"><i class="fas fa-map-marker-alt"></i></span>
-                <input class="search-input" type="search" name="place" id="place" placeholder="Marseille, France" />
-                <button class="search-button bg-bp" type="submit">Rechercher</button>
-            </form>
-            <!-- Filtres -->
-            <section class="filters-area flex">
-                <h2>Filtres</h2>
-                <form class="filters-form flex" method="post" action="filters.php">
-                    <h3 class="filters-form-choice flex">
-                        <i class="fas fa-money-bill-wave filters-form-icon bg-bs blue-primary"></i><input
-                            type="checkbox" name="class" id="class" /><label for="class">Économique</label>
-                    </h3>
-                    <h3 class="filters-form-choice flex">
-                        <i class="fas fa-child filters-form-icon bg-bs blue-primary"></i><input type="checkbox"
-                            name="family" id="family" /><label for="family">Familial</label>
-                    </h3>
-                    <h3 class="filters-form-choice flex">
-                        <i class="fas fa-heart filters-form-icon bg-bs blue-primary"></i><input type="checkbox"
-                            name="romantic" id="romantic" /><label for="romantic">Romantique</label>
-                    </h3>
-                    <h3 class="filters-form-choice flex">
-                        <i class="fas fa-dog filters-form-icon bg-bs blue-primary"></i><input type="checkbox"
-                            name="animals" id="animals" /><label for="animals">Animaux autorisés</label>
-                    </h3>
-                </form>
-            </section>
-            <p class="filters-form-info">
-                Plus de 500 logements sont disponibles dans cette ville.
-            </p>
+    <!-- Recherche & Filtres -->
+    <section class="search-area w1440p">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+        <!-- Search form -->
+        <form class="search-form flex">
+            <div class="search-icon bg--grey">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <input class="search-input" type="search" name="place" id="place" placeholder="Marseille, France" />
+            <button class="search-button bg--blue-primary" type="submit">
+                Rechercher
+            </button>
+        </form>
+        <!-- Filters -->
+        <article class="filters-area flex">
+            <h2>Filtres</h2>
+            <div class="filters-choice flex">
+                <i class="fas fa-money-bill-wave filters-icon flex bg--blue-secondary blue-primary"></i>
+                <h3 class="flex">Économique</h3>
+            </div>
+            <div class="filters-choice flex">
+                <i class="fas fa-child filters-icon flex bg--blue-secondary blue-primary"></i>
+                <h3 class="flex">Familial</h3>
+            </div>
+            <div class="filters-choice flex">
+                <i class="fas fa-heart filters-icon flex bg--blue-secondary blue-primary"></i>
+                <h3 class="flex">Romantique</h3>
+            </div>
+            <div class="filters-choice flex">
+                <i class="fas fa-dog filters-icon flex bg--blue-secondary blue-primary"></i>
+                <h3 class="flex">Animaux autorisés</h3>
+            </div>
+            <div class="filters-info flex">
+                <i class="fas fa-info filters-info-icon blue-primary"></i>
+                <p class="filters-info-text">Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
         </article>
-        <!-- Hébergements -->
-        <article class="grid lodging-area">
-            <section class="grid" id="lodging">
-                <h1>Hébergements à Marseille</h1>
-            </section>
-            <aside>
-                <h1>Les plus populaires</h1>
-            </aside>
+    </section>
+    <!-- Hébergements -->
+    <section class="lodging grid w1440p" id="lodging">
+        <article class="lodging-area grid bg--grey">
+            <h1>Hébergements à Marseille</h1>
+            <a class="lodging-card bg--white" href="#">
+                <figure class="m0">
+                    <img class="lodging-card-img" src="./images/lodging/small/auberge-cannebiere-small.jpg"
+                        alt="Une chambre de l'auberge cannebière, lit superposé avec vu sur cour " />
+                    <figcaption class="lodging-card-img-caption">
+                        <h3>Aubèrge la Cannebière</h3>
+                    </figcaption>
+                </figure>
+                <p class="lodging-card-price">Nuit à partir de <strong>25€</strong></p>
+                <ul class="lodging-card-description flex">
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star grey-star"></i></li>
+                </ul>
+            </a>
+            <a class="lodging-card bg--white" href="#">
+                <figure class="m0">
+                    <img class="lodging-card-img" src="./images/lodging/small/hotel-port-small.jpg"
+                        alt="Une chambre de l'hôtel du port, avec deux lits " />
+                    <figcaption class="lodging-card-img-caption">
+                        <h3>Hôtel du port</h3>
+                    </figcaption>
+                </figure>
+                <p class="lodging-card-price">Nuit à partir de <strong>52€</strong></p>
+                <ul class="lodging-card-description flex">
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                </ul>
+            </a>
+            <a class="lodging-card bg--white" href="#">
+                <figure class="m0">
+                    <img class="lodging-card-img" src="./images/lodging/small/hotel-mouettes-small.jpg"
+                        alt="Une chambre de l'hôtel les mouettes, avec une penderie " />
+                    <figcaption class="lodging-card-img-caption">
+                        <h3>Hôtel Les Mouettes</h3>
+                    </figcaption>
+                </figure>
+                <p class="lodging-card-price">Nuit à partir de <strong>76€</strong></p>
+                <ul class="lodging-card-description flex">
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star grey-star"></i></li>
+                </ul>
+            </a>
+            <a class="lodging-card bg--white" href="#">
+                <figure class="m0">
+                    <img class="lodging-card-img" src="./images/lodging/small/hotel-mer-small.jpg"
+                        alt="Lit auberge de la mer, tableau océan au dessus du lit" />
+                    <figcaption class="lodging-card-img-caption">
+                        <h3>Aubèrge de la mer</h3>
+                    </figcaption>
+                </figure>
+                <p class="lodging-card-price">Nuit à partir de <strong>46€</strong></p>
+                <ul class="lodging-card-description flex">
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star grey-star"></i></li>
+                    <li><i class="fas fa-star grey-star"></i></li>
+                </ul>
+            </a>
+            <a class="lodging-card bg--white" href="#">
+                <figure class="m0">
+                    <img class="lodging-card-img" src="./images/lodging/small/auberge-panier-small.jpg"
+                        alt="Une chambre de l'auberge cannebière, lit superposé avec vu sur cour " />
+                    <figcaption class="lodging-card-img-caption">
+                        <h3>Aubèrge Le Panier</h3>
+                    </figcaption>
+                </figure>
+                <p class="lodging-card-price">Nuit à partir de <strong>23€</strong></p>
+                <ul class="lodging-card-description flex">
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star grey-star"></i></li>
+                </ul>
+            </a>
+            <a class="lodging-card bg--white" href="#">
+                <figure class="m0">
+                    <img class="lodging-card-img" src="./images/lodging/small/hotel-chez-amina-small.jpg"
+                        alt="Une chambre de l'auberge cannebière, lit superposé avec vu sur cour " />
+                    <figcaption class="lodging-card-img-caption">
+                        <h3>Hôtel chez Amina</h3>
+                    </figcaption>
+                </figure>
+                <p class="lodging-card-price">Nuit à partir de <strong>96€</strong></p>
+                <ul class="lodging-card-description flex">
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                    <li><i class="fas fa-star blue-primary"></i></li>
+                </ul>
+            </a>
         </article>
-        <!-- Activités -->
-        <article class="grid" id="activity">
-            <h1>Activités à Marseille</h1>
-            <section class="grid activity-area">vieux port</section>
-        </article>
-    </main>
+        <aside class="lodging-popular grid bg--grey">
+            <div class="lodging-popular-title flex">
+                <h1 class="flex">Les plus populaire</i></h1>
+                <i class="fas fa-chart-line lodging-popular-title-icon"></i>
+            </div>
+        </aside>
+    </section>
+    <!-- Activité -->
+    <section class="activity-area w1440p" id="activity">
+        <h1>Activités à Marseille</h1>
+        <a class="activity-area-card activity-area-card1" href="#">
+            <figure class="activity-area-card-figure m0">
+                <img class="activity-area-card-figure-img" src="./images/activity/medium/vieux-port-medium.jpeg"/>
+                <figcaption class="activity-card-img-caption">
+                    <h3>Vieux Port</h3>
+                </figcaption>
+            </figure>
+        </a>
+    </section>
     <!-- Footer -->
-    <footer class="bg-g">
+    <footer class="bg--grey">
         <div class="footer-area grid">
             <nav class="flex footer-nav">
                 <h3>À propos</h3>
-                <a href="website-functioning.html">Fonctionnement du site</a>
-                <a href="terms-sale.html">Conditions générales de vente</a>
-                <a href="data-privacy.html">Données et confidentialités</a>
+                <a href="#">Fonctionnement du site</a>
+                <a href="#">Conditions générales de vente</a>
+                <a href="#">Données et confidentialités</a>
             </nav>
             <nav class="flex footer-nav">
                 <h3>Nos hébergements</h3>
-                <a href="quality-chart.html">Charte de qualité</a>
-                <a href="hotel-submit.html">Soumettre votre hôtel</a>
+                <a href="#">Charte de qualité</a>
+                <a href="#">Soumettre votre hôtel</a>
             </nav>
             <nav class="flex footer-nav">
                 <h3>Assistance</h3>
-                <a href="help-center.html">Centre d'aide</a>
-                <a href="contact-us.html">Nous contacter</a>
+                <a href="#">Centre d'aide</a>
+                <a href="#">Nous contacter</a>
             </nav>
         </div>
     </footer>
