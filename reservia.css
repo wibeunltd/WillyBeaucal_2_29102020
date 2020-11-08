@@ -213,7 +213,7 @@ ul {
   cursor: pointer;
 }
 
-.filters-choice i{
+.filters-choice i, .filters-info i{
   display: flex;
   align-items: center;
   justify-content: center;
