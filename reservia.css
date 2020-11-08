@@ -200,9 +200,9 @@ ul {
 }
 
 .filters-area h2 {
-  display: flex;
   align-items: center;
   margin-right: 1.25rem;
+  margin-top: 0;
 }
 
 .filters-choice {
@@ -295,25 +295,27 @@ ul {
   border-radius: 1rem 1rem 0 0;
 }
 
-.lodging-card-img-caption h3,
-.lodging-popular-card-img-caption h3 {
+.lodging-card-img-caption h3 {
   font-size: 1rem;
   margin: 0.15rem 0.15rem 0 0.75rem;
 }
 
-.lodging-card-description,
-.lodging-popular-card-description {
+.lodging-card-description{
   padding-left: 0;
   margin: 0.25rem 0.75rem;
 }
 
-.lodging-card-description li,
-.lodging-popular-card-description li {
+.lodging-card-description li{
   margin-left: 0;
 }
 
 .lodging-card-price {
   margin: 0.25rem 0.75rem;
+}
+
+.lodging-link-more{
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 /* Les + populaires */
@@ -334,14 +336,15 @@ ul {
 .lodging-popular-card {
   align-items: stretch;
   height: 100%;
-  /* overflow: auto; */
+  overflow: hidden;
 }
 
 .lodging-popular-card-img {
   position: relative;
   min-height: 100%;
-  width: 100%;
-  height: 100%;
+  width: 33%;
+  min-width: 33%;
+  max-width: 33%;
   object-fit: cover;
 }
 
