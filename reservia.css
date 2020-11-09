@@ -214,6 +214,10 @@ ul {
   cursor: pointer;
 }
 
+.filters-choice:hover{
+  background: rgba(222, 235, 255, .2);
+}
+
 .filters-choice i,
 .filters-info i {
   display: flex;
@@ -254,6 +258,7 @@ ul {
   margin-top: 1.5rem;
   column-gap: 2rem;
   grid-template-columns: 6fr 3fr;
+  grid-template-areas: "lodging-area lodging-popular";
 }
 
 .lodging-area,
@@ -266,6 +271,7 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5rem;
   row-gap: 1.5rem;
+  grid-area: lodging-area;
 }
 
 .lodging-area a {
@@ -327,8 +333,9 @@ ul {
 
 .lodging-popular {
   row-gap: 2rem;
-  /* grid-template-rows: repeat(3, 1fr); */
   align-items: start;
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-area: lodging-popular;
 }
 
 .lodging-popular-title-icon {
@@ -351,7 +358,6 @@ ul {
   width: 33%;
   min-width: 33%;
   max-width: 33%;
-  object-fit: cover;
 }
 
 .lodging-popular-card-img img {
@@ -473,105 +479,8 @@ ul {
   color: #0065fc;
 }
 
-/* Media Queries */
-/* Small*/
-/*--Header--*/
-@media screen and (max-width: 575px) {
-  .header-area {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "logo . signup" "navbar navbar navbar";
-  }
-
-  .nav-link,
-  .signup {
-    padding: 1rem;
-    border-top: hidden;
-  }
-
-  .nav-link {
-    border-bottom: 0.125rem solid #f2f2f2;
-    width: 50%;
-  }
-
-  .active {
-    border-bottom: 0.125rem solid #0065fc;
-  }
-
-  .logo {
-    padding: 1rem;
-  }
-
-  /* Search Form */
-  .search-area {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .search-area h1,
-  .search-area p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .search-area h1 {
-    font-size: 1.25rem;
-  }
-
-  .search-area p {
-    font-size: 0.9375rem;
-  }
-
-  .search-input {
-    padding: 0.5rem;
-    max-width: 60%;
-  }
-
-  .search-button {
-    font-size: 0;
-  }
-
-  .search-button::before {
-    content: "\f002";
-    font-family: "Font Awesome\ 5 Free";
-    font-size: 1.25rem;
-  }
-
-  /* Filtres */
-  .filters-area h2 {
-    width: 100%;
-  }
-
-  /* Footer */
-}
-/* Small-up */
-@media screen and (min-width: 576px) and (max-width: 1200px) {
-  /* Header */
-  .logo {
-    padding: 1rem;
-  }
-
-  .active {
-    border-top: 0.125rem solid transparent;
-  }
-
-  /* Search Form */
-  .search-area {
-    padding-left: 1rem;
-  }
-
-  .search-input {
-    padding: 0.5rem;
-    max-width: 30%;
-  }
-
-  /* Footer */
-  .footer {
-    width: 100%;
-    padding-left: 1rem;
-  }
-
-  .footer-area {
-    flex-direction: column;
-    padding-bottom: 2rem;
+@media screen and (min-width: 1200px){
+  .header-area, .search-area, .lodging, .activity-area {
+    padding: 0 1rem;
   }
 }
