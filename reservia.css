@@ -479,6 +479,20 @@ ul {
   color: #0065fc;
 }
 
+/* Responsive */
+
+/* Entre 992 et 1199 pixels */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .header-area, .search-area, .lodging, .activity-area {
+    padding: 0 1rem;
+  }
+
+  html{
+    font-size: 14px;
+  }
+}
+
+/* + de 1200 pixels */
 @media screen and (min-width: 1200px){
   .header-area, .search-area, .lodging, .activity-area {
     padding: 0 1rem;
