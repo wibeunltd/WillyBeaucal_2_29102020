@@ -214,8 +214,8 @@ ul {
   cursor: pointer;
 }
 
-.filters-choice:hover{
-  background: rgba(222, 235, 255, .2);
+.filters-choice:hover {
+  background: rgba(0, 101, 252, .2);
 }
 
 .filters-choice i,
@@ -254,7 +254,6 @@ ul {
 
 /* Hébergements */
 .lodging {
-  display: grid;
   margin-top: 1.5rem;
   column-gap: 2rem;
   grid-template-columns: 6fr 3fr;
@@ -268,6 +267,7 @@ ul {
 }
 
 .lodging-area {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5rem;
   row-gap: 1.5rem;
@@ -328,6 +328,7 @@ ul {
 
 /* Les + populaires */
 .lodging-popular-title {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -339,7 +340,7 @@ ul {
 }
 
 .lodging-popular-title-icon {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
 .lodging-popular-card {
@@ -372,22 +373,21 @@ ul {
   flex-direction: column;
 }
 
-.lodging-popular-card-img-caption h3, .lodging-popular-card-img-caption p{
-  margin: .25rem 1rem;
+.lodging-popular-card-img-caption h3,
+.lodging-popular-card-img-caption p {
+  margin: 0.25rem 1rem;
 }
 
-.lodging-popular-card-description{
+.lodging-popular-card-description {
   padding-left: 1rem;
   margin-top: 1.5rem;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 /* Activités */
 .activity-area {
   display: grid;
   column-gap: 2rem;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
   margin: 2rem auto;
 }
 
@@ -421,36 +421,6 @@ ul {
   margin: 1.2rem;
 }
 
-.activity-area-card1 {
-  grid-row: 2/7;
-  grid-column: 1/2;
-}
-
-.activity-area-card2 {
-  grid-column: 2/3;
-  grid-row: 2/5;
-}
-
-.activity-area-card3 {
-  grid-column: 2/3;
-  grid-row: 6/7;
-}
-
-.activity-area-card4 {
-  grid-column: 3/4;
-  grid-row: 2/7;
-}
-
-.activity-area-card5 {
-  grid-column: 4/5;
-  grid-row: 2/3;
-}
-
-.activity-area-card6 {
-  grid-column: 4/5;
-  grid-row: 4/7;
-}
-
 /* Footer */
 .footer-area {
   max-width: 77.5rem;
@@ -480,21 +450,221 @@ ul {
 }
 
 /* Responsive */
+/* - de 768 pixels*/
+@media screen and (max-width: 575px) {
+  /* Header */
+  .header-area {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo . signup" "navbar navbar navbar";
+  }
 
-/* Entre 992 et 1199 pixels */
-@media screen and (min-width: 992px) and (max-width: 1199px){
-  .header-area, .search-area, .lodging, .activity-area {
+  .nav-link,
+  .signup {
+    padding: 1rem;
+    border-top: hidden;
+  }
+
+  .nav-link {
+    border-bottom: 0.125rem solid #f2f2f2;
+    width: 50%;
+  }
+
+  .active {
+    border-bottom: 0.125rem solid #0065fc;
+  }
+
+  .logo {
+    padding: 1rem;
+  }
+
+  /* Search Form */
+  .search-area {
     padding: 0 1rem;
   }
 
-  html{
+  .search-area h1,
+  .search-area p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-area h1 {
+    font-size: 1.25rem;
+  }
+
+  .search-area p {
+    font-size: 0.9375rem;
+  }
+
+  .search-input {
+    padding: 0.5rem;
+    max-width: 60%;
+  }
+
+  .search-button {
+    font-size: 0;
+  }
+
+  .search-button::before {
+    content: "\f002";
+    font-family: "Font Awesome\ 5 Free";
+    font-size: 1.25rem;
+  }
+
+  /* Filtres */
+  .filters-area h2 {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-nav:not(:last-child){
+    padding-bottom: 2rem;
+  }
+
+  .footer-nav h3{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-area,
+  .lodging,
+  .activity-area {
+    padding: 0 1rem;
+  }
+
+  .activity-area {
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+  }
+}
+
+/* Entre 768 et 991 pixels */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .header-area,
+  .search-area,
+  .lodging,
+  .activity-area {
+    padding: 0 1rem;
+  }
+
+  html {
     font-size: 14px;
+  }
+
+  .search-input {
+    max-width: 30%;
+  }
+
+  .activity-area {
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 12rem 12rem 12rem;
+  }
+}
+
+/* Entre 992 et 1199 pixels */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .header-area,
+  .search-area,
+  .lodging,
+  .activity-area {
+    padding: 0 1rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .activity-area {
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 12rem 12rem;
   }
 }
 
 /* + de 1200 pixels */
-@media screen and (min-width: 1200px){
-  .header-area, .search-area, .lodging, .activity-area {
+@media screen and (min-width: 576px) {
+  /* Header */
+  .header-area {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar signup";
+  }
+
+  .header-area, .search-area{
     padding: 0 1rem;
+  }
+
+  .nav-link,
+  .signup {
+    border-top: 0.125rem solid transparent;
+  }
+
+  .active,
+  .nav-link:hover,
+  .signup:hover {
+    border-top: 0.125rem solid #0065fc;
+  }
+/* Search */
+  .search-area{
+    padding-left: 1rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-area,
+  .search-area,
+  .lodging,
+  .activity-area {
+    padding: 0 1rem;
+  }
+
+  .activity-area {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+  }
+
+  .activity-area-card1 {
+    grid-row: 2/7;
+    grid-column: 1/2;
+  }
+
+  .activity-area-card2 {
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+
+  .activity-area-card3 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+
+  .activity-area-card4 {
+    grid-column: 3/4;
+    grid-row: 2/7;
+  }
+
+  .activity-area-card5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+
+  .activity-area-card6 {
+    grid-column: 4/5;
+    grid-row: 4/7;
   }
 }
