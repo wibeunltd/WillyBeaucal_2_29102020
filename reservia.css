@@ -478,6 +478,15 @@ ul {
     padding: 1rem;
   }
 
+  .active, .nav-link:hover, .signup:hover {
+    color: #0065fc;
+    border-top: hidden;
+  }
+
+  .filters-area h3 {
+    margin: 0 .4rem;
+  }
+
   /* Search Form */
   .search-area {
     padding: 0 1rem;
