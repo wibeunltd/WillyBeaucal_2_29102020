@@ -542,6 +542,22 @@ ul {
     padding: 0 1rem;
   }
 
+  .lodging{
+    grid-template-columns: 1fr;
+    grid-template-areas: "lodging-popular" "lodging-area";
+    padding: 0;
+  }
+
+  .lodging-popular{
+    margin-bottom: 2rem;
+    border-radius: 0;
+  }
+
+  .lodging-area{
+    background-color: transparent;
+    grid-template-columns: 1fr;
+  }
+
   .activity-area {
     row-gap: 2rem;
     grid-template-columns: 1fr;
