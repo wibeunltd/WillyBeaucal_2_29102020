@@ -483,8 +483,13 @@ ul {
     border-top: hidden;
   }
 
+  .filters-choice{
+    margin-right: .8rem;
+  }
+
   .filters-area h3 {
     margin: 0 .4rem;
+    font-size: .9rem;
   }
 
   /* Search Form */
